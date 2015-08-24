@@ -3,11 +3,11 @@ layout: post
 title: Easy Cheat Sheet for Decorators and Classes in JavaScript
 ---
 
-In JavaScript it can be easy to confuse Decorators and the three types of Classes.  Just remember that Decorators 'decorate' pre-made objects, and Classes create newInstances.
+In JavaScript it can be easy to confuse Decorators and the four types of Classes.  Just remember that Decorators 'decorate' pre-made objects, and Classes create newInstances.
 
 A Decorator is a function that takes in an object, adds functionality to that object, and returns a newly 'decorated' object.
 
-There Three Classes: Functional, Prototypal, and Pseudoclassical
+There Four Classes: Functional, Functional Shared, Prototypal, and Pseudoclassical
 
 Functional Class: The functional class creates a newInstance with optional inputs - usually using object literal notation ** var obj == {} **.  It can then 'decorate' the newInstance with additional methods.  It then returns the newInstance.
 
