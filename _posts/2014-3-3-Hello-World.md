@@ -9,7 +9,9 @@ A Decorator is a function that takes in an object, adds functionality to that ob
 
 There Three Classes: Functional, Prototypal, and Pseudoclassical
 
-Functional Class: The functional class creates a newInstance with optional inputs - usually using object literal notation ** var obj == {} **.  It can then 'decorate' the newInstance with additional methods.  This 'decoration' can be done by passing the newInstance to extend along with a methodsObject.  It then returns the newInstance.
+Functional Class: The functional class creates a newInstance with optional inputs - usually using object literal notation ** var obj == {} **.  It can then 'decorate' the newInstance with additional methods.  It then returns the newInstance.
+
+Functional Shared Class: This is just like the functional class except you have a methodsObject that is shared by all instances.  This can be done by passing the newInstance to extend along with a methodsObject.  
 
 Protypal Class: Instead of using object literal notation to create a newInstance, we create the newInstance with **Object.create(ClassName.prototype)**.  This .prototype is an ordinary object except that it is pre-built in JavaScript.  You can add new functionality to the Class like so: ClassName.prototype.newMethod = function(){};
 
