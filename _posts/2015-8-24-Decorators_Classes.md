@@ -21,12 +21,12 @@ var Robot = function(catchPhrase) {
 var arnold = Robot("I'll be back!");
 {% endhighlight %}
 
-Functional Shared Class: This is just like the functional class except you have a methodsObject that is shared by all instances.  This can be done by passing the newInstance to extend along with a methodsObject.  
+Functional Shared Class: This is just like the functional class except you have a methodsObject that is shared by all instances.  This can be done by passing the newInstance to extend (available in jQuery) along with a methodsObject.  
 
 {% highlight ruby linenos %}
 var Robot = function(catchPhrase) {
   var obj = {catchPhrase: catchPhrase};
-  extend(obj, Robot.methods);  // extend is available in jQuery
+  extend(obj, Robot.methods);
   return obj;
 }
 
