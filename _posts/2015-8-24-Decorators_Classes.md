@@ -37,6 +37,28 @@ Robot.methods = {
 var arnold = Robot("I'll be back!");
 {% endhighlight %}
 
-Protypal Class: Instead of using object literal notation to create a newInstance, we create the newInstance with **Object.create(ClassName.prototype)**.  This .prototype is an ordinary object except that it is pre-built in JavaScript.  You can add new functionality to the Class like so: ClassName.prototype.newMethod = function(){};
+Protypal Class: Instead of using object literal notation to create a newInstance, we create the newInstance with: Object.create(ClassName.prototype).  This .prototype is an ordinary object except that it is pre-built in JavaScript.  You can add new functionality to the Class like so: ClassName.prototype.newMethod = function(){};
+
+{% highlight ruby linenos %}
+var Robot = function(catchPhrase) {
+  var obj = Object.create(Robot.prototype);
+  obj.catchPhrase = catchPhrase;
+  return obj;
+}
+
+Robot.prototype.speak = function(){console.log(this.catchPhrase);};
+
+var arnold = Robot("I'll be back!");
+{% endhighlight %}
 
 Pseudoclassical Classes:  This is very similar to the Protypal Class, but we use the keyword 'new' to create a new instance.  Using 'new' we don't have to type out Object.create() or return the object.
+
+{% highlight ruby linenos %}
+var Robot = function(catchPhrase) {
+  this.catchPhrase = catchPhrase;
+}
+
+Robot.prototype.speak = function(){console.log(this.catchPhrase);};
+
+var arnold = new Robot("I'll be back!");
+{% endhighlight %}
