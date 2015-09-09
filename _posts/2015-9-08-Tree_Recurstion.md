@@ -25,11 +25,9 @@ var telephoneWords = function(digitString) {
   var results = [];
 
   var recurse = function(string, digitArr) {
-    // BASE CASE
     if (digitArr.length === 0) {
       results.push(string);
     }
-    // RECURSIVE CASE
     else {
       var letters = phoneDigitsToLetters[digitArr[0]].split('');
       letters.forEach(function(letter){
