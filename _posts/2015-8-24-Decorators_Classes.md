@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Easy Cheat Sheet for Decorators and Classes in JavaScript
+title: Class Instantiation Patterns
 ---
 
 In JavaScript it can be easy to confuse Decorators and the four types of Classes.  Just remember that Decorators 'decorate' pre-made objects, and Classes create newInstances.

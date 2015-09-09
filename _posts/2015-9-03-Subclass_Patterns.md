@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Subclass Instantiation Patterns Cheat Sheet
+title: Subclass Instantiation Patterns
 ---
 Subclasses, like Classes, are like factories that create similar objects.  Subclasses themselves have a parent object from which they gain functionality.  In the following examples we have a Robot class and a Terminator subclass.  The Terminator subclass will have all the functionality of robot with an additional speak method.
 
