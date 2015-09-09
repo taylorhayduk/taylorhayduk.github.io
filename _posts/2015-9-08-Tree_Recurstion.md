@@ -14,13 +14,43 @@ There Four Classes: Functional, Functional Shared, Prototypal, and Pseudoclassic
 The functional class creates a newInstance with optional inputs - usually using object literal notation.  It can then 'decorate' the new instance with additional methods and returns it.
 
 {% highlight ruby linenos %}
-var Robot = function(catchPhrase) {
-  var obj = {catchPhrase: catchPhrase};
-  obj.speak = function(){console.log(obj.catchPhrase);};
-  return obj;
-}
+var phoneDigitsToLetters = {
+  0: '0',
+  1: '1',
+  2: 'ABC',
+  3: 'DEF',
+  4: 'GHI',
+  5: 'JKL',
+  6: 'MNO',
+  7: 'PQRS',
+  8: 'TUV',
+  9: 'WXYZ'
+};
 
-var arnold = Robot("I'll be back!");
+
+var telephoneWords = function(digitString) {
+  digitArr = digitString.split('');
+  var results = [];
+
+  var recurse = function(string, digitArr) {
+    // BASE CASE
+    if (digitArr.length === 0) {
+      results.push(string);
+    }
+    // RECURSIVE CASE
+    else {
+      var letters = phoneDigitsToLetters[digitArr[0]].split('');
+      letters.forEach(function(letter){
+        recurse(string+letter, digitArr.slice(1));
+      });
+    }
+  };
+  
+  recurse("", digitArr);
+  return results;
+};
+
+console.log(telephoneWords('5309'));
 {% endhighlight %}
 
 **Functional Shared Class**
