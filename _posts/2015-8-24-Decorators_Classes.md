@@ -9,7 +9,9 @@ A Decorator is a function that takes in an object, adds functionality to that ob
 
 There Four Classes: Functional, Functional Shared, Prototypal, and Pseudoclassical
 
-Functional Class: The functional class creates a newInstance with optional inputs - usually using object literal notation ** var obj == {} **.  It can then 'decorate' the newInstance with additional methods.  It then returns the newInstance.
+**Functional Class**
+
+The functional class creates a newInstance with optional inputs - usually using object literal notation.  It can then 'decorate' the new instance with additional methods and returns it.
 
 {% highlight ruby linenos %}
 var Robot = function(catchPhrase) {
@@ -21,7 +23,9 @@ var Robot = function(catchPhrase) {
 var arnold = Robot("I'll be back!");
 {% endhighlight %}
 
-Functional Shared Class: This is just like the functional class except you have a methodsObject that is shared by all instances.  This can be done by passing the newInstance to extend (available in jQuery) along with a methodsObject.  
+**Functional Shared Class**
+
+This is just like the functional class except you have a methods object that is shared by all instances.  This can be done by passing the new instance to extend (available in jQuery) along with the methods object.  
 
 {% highlight ruby linenos %}
 var Robot = function(catchPhrase) {
@@ -37,7 +41,15 @@ Robot.methods = {
 var arnold = Robot("I'll be back!");
 {% endhighlight %}
 
-Protypal Class: Instead of using object literal notation to create a newInstance, we create the newInstance with: Object.create(ClassName.prototype).  This .prototype is an ordinary object except that it is pre-built in JavaScript.  You can add new functionality to the Class like so: ClassName.prototype.newMethod = function(){};
+**Protypal Class**
+
+Instead of using object literal notation to create a new instance, we create the new instance with:
+
+Object.create(ClassName.prototype)
+
+This .prototype is just like the methods object above except that it is pre-built in JavaScript.  You can add new functionality to the Class like so:
+
+ClassName.prototype.newMethod = function(){};
 
 {% highlight ruby linenos %}
 var Robot = function(catchPhrase) {
@@ -51,7 +63,9 @@ Robot.prototype.speak = function(){console.log(this.catchPhrase);};
 var arnold = Robot("I'll be back!");
 {% endhighlight %}
 
-Pseudoclassical Classes:  This is very similar to the Protypal Class, but we use the keyword 'new' to create a new instance.  Using 'new' we don't have to type out Object.create() or return the object.
+**Pseudoclassical Classes**
+
+This is very similar to the Protypal Class, but we use the keyword 'new' to create a new instance.  Using 'new' we don't have to type out Object.create() or return the object.
 
 {% highlight ruby linenos %}
 var Robot = function(catchPhrase) {
