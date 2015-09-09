@@ -5,41 +5,15 @@ title: Tree Permutations
 
 
 {% highlight ruby linenos %}
+var Robot = function(catchPhrase) {
+  var obj = {catchPhrase: catchPhrase};
+  extend(obj, Robot.methods);
+  return obj;
+}
 
-var phoneDigitsToLetters = {
-  0: '0',
-  1: '1',
-  2: 'ABC',
-  3: 'DEF',
-  4: 'GHI',
-  5: 'JKL',
-  6: 'MNO',
-  7: 'PQRS',
-  8: 'TUV',
-  9: 'WXYZ'
+Robot.methods = {
+  speak: function(){console.log(obj.catchPhrase);}
 };
 
-
-var telephoneWords = function(digitString) {
-  digitArr = digitString.split('');
-  var results = [];
-
-  var recurse = function(string, digitArr) {
-    if (digitArr.length === 0) {
-      results.push(string);
-    }
-    else {
-      var letters = phoneDigitsToLetters[digitArr[0]].split('');
-      letters.forEach(function(letter){
-        recurse(string+letter, digitArr.slice(1));
-      });
-    }
-  };
-  
-  recurse("", digitArr);
-  return results;
-};
-
-console.log(telephoneWords('5309'));
-
+var arnold = Robot("I'll be back!");
 {% endhighlight %}
