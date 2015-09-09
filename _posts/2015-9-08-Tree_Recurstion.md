@@ -2,8 +2,6 @@
 layout: post
 title: Tree Permutations
 ---
-
-
 {% highlight ruby linenos %}
 var Robot = function(catchPhrase) {
   var obj = {catchPhrase: catchPhrase};
