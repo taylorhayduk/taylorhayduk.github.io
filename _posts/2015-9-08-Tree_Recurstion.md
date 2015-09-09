@@ -5,6 +5,7 @@ title: Tree Permutations
 
 
 {% highlight ruby linenos %}
+
 var phoneDigitsToLetters = {
   0: '0',
   1: '1',
@@ -42,4 +43,5 @@ var telephoneWords = function(digitString) {
 };
 
 console.log(telephoneWords('5309'));
+
 {% endhighlight %}
