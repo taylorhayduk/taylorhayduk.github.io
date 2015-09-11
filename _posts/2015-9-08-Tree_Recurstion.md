@@ -13,11 +13,11 @@ When creating a recursive function, you need a base case and a recursive case.  
 Finally, we return the results array that holds all our combos.
 
 
-{% highlight ruby linenos %}
+{% highlight js %}
 var recursiveMeal = [
-  ['salad','chips','popcorn shrimp'], // Starter
-  ['steak','shrimp & grits','tofu','hamburger'], // Main Course
-  ['ice cream', 'apple pie', 'peach cobbler', 'beer']  // Dessert
+  ['salad','chips','bloomin\' onion'],
+  ['steak','shrimp & grits','tofu','hamburger'],
+  ['ice cream', 'apple pie', 'peach cobbler', 'rootbeer float']
 ];
 
 
