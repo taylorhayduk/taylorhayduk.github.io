@@ -13,7 +13,7 @@ There Four Classes: Functional, Functional Shared, Prototypal, and Pseudoclassic
 
 The functional class creates a newInstance with optional inputs - usually using object literal notation.  It can then 'decorate' the new instance with additional methods and returns it.
 
-{% highlight ruby linenos %}
+{% highlight javascript %}
 var Robot = function(catchPhrase) {
   var obj = {catchPhrase: catchPhrase};
   obj.speak = function(){console.log(obj.catchPhrase);};
@@ -27,7 +27,7 @@ var arnold = Robot("I'll be back!");
 
 This is just like the functional class except you have a methods object that is shared by all instances.  This can be done by passing the new instance to extend (available in jQuery) along with the methods object.  
 
-{% highlight ruby linenos %}
+{% highlight javascript %}
 var Robot = function(catchPhrase) {
   var obj = {catchPhrase: catchPhrase};
   extend(obj, Robot.methods);
@@ -51,7 +51,7 @@ This .prototype is just like the methods object above except that it is pre-buil
 
 ClassName.prototype.newMethod = function(){};
 
-{% highlight ruby linenos %}
+{% highlight javascript %}
 var Robot = function(catchPhrase) {
   var obj = Object.create(Robot.prototype);
   obj.catchPhrase = catchPhrase;
@@ -67,7 +67,7 @@ var arnold = Robot("I'll be back!");
 
 This is very similar to the Protypal Class, but we use the keyword 'new' to create a new instance.  Using 'new' we don't have to type out Object.create() or return the object.
 
-{% highlight ruby linenos %}
+{% highlight javascript %}
 var Robot = function(catchPhrase) {
   this.catchPhrase = catchPhrase;
 }

@@ -13,7 +13,7 @@ When creating a recursive function, you need a base case and a recursive case.  
 Finally, we return the results array that holds all our combos.
 
 
-{% highlight js %}
+{% highlight javascript %}
 var recursiveMeal = [
   ['salad','chips','bloomin\' onion'],
   ['steak','shrimp & grits','tofu','hamburger'],

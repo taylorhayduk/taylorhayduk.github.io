@@ -9,7 +9,7 @@ Subclasses, like Classes, are like factories that create similar objects.  Subcl
 
 In the functional subclass instantiation pattern, we have a function that first creates a new instance of it's parent by calling the parent and passing in any necessary parameters.  The subclass function then adds additional functionality to the parent object and returns it.
 
-{% highlight ruby linenos %}
+{% highlight javascript %}
 var Robot = function(catchPhrase) {
   var obj = {catchPhrase: catchPhrase};
   obj.speak = function(){console.log(obj.catchPhrase);};
@@ -38,7 +38,7 @@ Next we set the subclass's prototype.constructor to be the subclass itself.  Thi
 Lastly, we add in any functionality that we want in the new subclass.
 
 
-{% highlight ruby linenos %}
+{% highlight javascript %}
 var Robot = function(catchPhrase) {
   this.catchPhrase = catchPhrase;
 };
