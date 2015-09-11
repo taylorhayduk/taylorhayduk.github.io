@@ -8,30 +8,30 @@ We can use recursion using a tree data structure to come up with all combination
 
 In our combos function we taken in one parameter, arrayOfArrays.  We then create an empty results array to store each combo.
 
-Next we have our recurse function that takes in an array called 'current' and an array index.  We will use the 'current' array to build each combo and our arrIndex to keep track of which array in the arrayOfArrays we are currently on.
+When creating a recursive function, you need a base case and a recursive case.  Our base case will push the current combo to the results array when we have incremented thru all interior arrays.  Our recursive case will go thru the current array, add each element to combo and (for each element) call the recursion again while incrementing arrIndex.
 
-On each recursive pass, we iterate thru the elements in the 'arrIndex' array and each element to the 'current' array.  We then pass this new combo to the recursive function and increment the arrIndex by 1.  Once our arrIndex has passed the length of the arrayOfArrays, we can return the combo.
+Finally, we return the results array that holds all our combos.
 
 
 {% highlight ruby linenos %}
 var recursiveMeal = [
   ['salad','chips','popcorn shrimp'], // Starter
   ['steak','shrimp & grits','tofu','hamburger'], // Main Course
-  ['ice cream', 'apple pie', 'peach cobbler', 'rootbeer float']  // Dessert
+  ['ice cream', 'apple pie', 'peach cobbler', 'beer']  // Dessert
 ];
 
 
 var combos = function(arrayOfArrays) {
   var results = [];
-  var recurse = function(current, arrIndex) {
+  var recurse = function(combo, arrIndex) {
     // BASE CASE
     if (arrIndex >= arrayOfArrays.length) {
-      results.push(current);
+      results.push(combo);
     }
     // RECURSIVE CASE
     else {
       arrayOfArrays[arrIndex].forEach(function(element){
-        recurse(current.concat(element), arrIndex+1);
+        recurse(combo.concat(element), arrIndex+1);
       });
     }
   };
