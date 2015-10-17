@@ -7,6 +7,7 @@ Directives allow HTML to express behavior of a web application.
 
 Say you have a webpage where you're listing out a bunch all players in a team.  Your homepage might look something like the following.
 
+{% highlight html %}
 <html lang="en" ng-app="myApp">
   <head>
   </head>
@@ -27,6 +28,7 @@ Say you have a webpage where you're listing out a bunch all players in a team.  
     ...
   </body>
 </html>
+{% endhighlight %}
 
 You are likely to have a lot more html than what is written above.  Instead of putting all that Starting Lineup information in the homepage, we can separate it into a directive.
 
