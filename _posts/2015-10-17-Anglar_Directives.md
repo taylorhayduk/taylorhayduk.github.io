@@ -37,8 +37,11 @@ In you app.js, create a directive for the Lineup.  In the directive, we return a
 The restrict value can be set to 'E', 'A', or 'C'.  This is to choose if you want to replace the Lineup with an element or attribute.
 
 Element:
+{% highlight html %}
 <player-lineup></player-lineup>
-
+{% endhighlight %}
 Attribute:
+{% highlight html %}
 <div player-lineup="expression"></div>
+{% endhighlight %}
 
